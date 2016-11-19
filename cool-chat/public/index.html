@@ -11,11 +11,23 @@
     <script>
       var config = {
         apiKey: "AIzaSyB0QAJAnXUD3YlpqtSRMll5HpsQkWOc1-U",
-        authDomain: "cool-chat-app.firebaseapp.com",
-        databaseURL: "https:/cool-chat-app.firebaseio.com",
+        authDomain: "cool-chat-app-ecf70.firebaseapp.com",
+        databaseURL: "https://cool-chat-app-ecf70.firebaseio.com/",
         storageBucket: ""
         };
-        firebase.initializeApp(config);
+
+      firebase.initializeApp(config);
+      firebaseDB = firebase.database();
+      funSection = firebaseDB.ref("fun")
+      funSection.on("value", function(events) {
+        funEventList = events.val();
+        console.log(funEventList)
+      })
+
+      var testString = "is this being imported"
+
+
+
     </script> 
 
 
