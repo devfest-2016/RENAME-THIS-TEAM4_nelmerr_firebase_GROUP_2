@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import NavBar from './components/navbar'
-import ChatRoom from './chatroom'
+import ChatRoom from './components/chatroom'
 
 class App extends Component {
   render() {
