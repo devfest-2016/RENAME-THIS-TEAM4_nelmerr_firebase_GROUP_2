@@ -1,16 +1,24 @@
 import {fireBaseLink} from "../constants"
+import {firebase, helpers} from 'redux-react-firebase'
 
 export function fetchMessages(){
-  const messages = fetch(`${fireBaseLink}/messages`).then(response => {
-    return response.json()
-  }).then(messagesPayload => {
-    return messagesPayload
-  })
+  // // const messages = fetch(`${fireBaseLink}/messages`).then(response => {
+  // //   return response.json()
+  // // }).then(messagesPayload => {
+  // //   return messagesPayload
+  // // })
+  //     // firebase.initializeApp(config);
+  //     // firebaseDB = firebase.database();
+  //     // funSection = firebaseDB.ref("fun")
+  //     // funSection.on("value", function(events) {
+  //     //   funEventList = events.val();
+  //     //   console.log(funEventList)
+  //     // })
 
-  return {
-    type: 'FETCH_MESSAGES',
-    payload: messages
-  }
+  // return {
+  //   type: 'FETCH_MESSAGES',
+  //   payload: messages
+  // }
 }
 
 export function postMessage(params){

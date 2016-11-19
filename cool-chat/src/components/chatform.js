@@ -2,8 +2,8 @@ import React from 'react'
 import * as actions from '../actions'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-
 import {Button} from 'react-bootstrap'
+import {firebase, helpers} from 'redux-react-firebase'
 
 class ChatForm extends React.Component {
 
