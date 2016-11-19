@@ -1,6 +1,6 @@
 import React from 'react'
-import ChatForm from 'chatform'
-import Emoji from 'emoji'
+import ChatForm from './chatform'
+import Emoji from './emoji'
 
 import {connect} from 'react-redux'
 
@@ -8,7 +8,7 @@ import {connect} from 'react-redux'
 function ChatRoom () { 
     return (
         <div>
-            {this.props.messages}
+            
             <ChatForm />
             <Emoji />
         </div>

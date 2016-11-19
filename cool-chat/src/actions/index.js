@@ -1,7 +1,7 @@
 import {fireBaseLink} from "../constants"
 
 export function fetchMessages(){
-  const funMessages = fetch(`${fireBaseLink}/messages`).then(response => {
+  const messages = fetch(`${fireBaseLink}/messages`).then(response => {
     return response.json()
   }).then(messagesPayload => {
     return messagesPayload

@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import funReducer from './fun_reducer';
+import messagesReducer from './messages_reducer';
 
 const rootReducer = combineReducers({
-    funMessages: funReducer
+    funMessages: messagesReducer
 })
 
 export default rootReducer
