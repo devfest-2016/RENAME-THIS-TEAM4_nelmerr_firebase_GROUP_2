@@ -10,6 +10,7 @@ class App extends Component {
       <div className="App">
         <NavBar />
         <ChatRoom />
+        {/* {this.props.children} */}
       </div>
     );
   }

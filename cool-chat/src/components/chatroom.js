@@ -5,12 +5,12 @@ import Emoji from './emoji'
 import {connect} from 'react-redux'
 
 
-function ChatRoom () { 
+function ChatRoom () {
     return (
         <div>
-            
-            <ChatForm />
-            <Emoji />
+          <h1>CHATROOM</h1>
+          <ChatForm />
+          <Emoji />
         </div>
     )
 }
