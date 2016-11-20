@@ -1,29 +1,26 @@
-import {fireBaseLink} from "../constants"
+// import {fireBaseLink} from "../constants"
+// import {firebase, helpers} from 'redux-react-firebase'
+// import {config} from '../reducers'
 
-export function fetchMessages(){
-  const messages = fetch(`${fireBaseLink}/messages`).then(response => {
-    return response.json()
-  }).then(messagesPayload => {
-    return messagesPayload
-  })
-
-  return {
-    type: 'FETCH_MESSAGES',
-    payload: messages
-  }
-}
+const db = firebase.database().ref('fun')
 
 export function postMessage(params){
-  const newMessage = fetch(`${fireBaseLink}/messages`, {
-    method: 'POST',
-    body: JSON.stringify(params),
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-    }
-  })
-  return {
-    type: 'POST_MESSAGE',
-    payload: newMessage
-  }
+  db.push(params)
 }
+
+
+// export function fetchMessages(){
+//   // firebase.initializeApp(config);
+//   // let firebaseDB = firebase.database();
+//   // let funSection = firebaseDB.ref("fun")
+  
+//   // const messages = funSection.on("value", function(events) {
+//   //     let funEventList = events.val();
+//   //     console.log(funEventList)
+//   // })
+
+//   // return {
+//   //   type: 'FETCH_MESSAGES',
+//   //   payload: messages
+//   // }
+// }
