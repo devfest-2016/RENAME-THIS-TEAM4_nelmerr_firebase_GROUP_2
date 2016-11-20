@@ -15,7 +15,6 @@ import rootReducer from './reducers';
 import { fetchMessages } from './actions'
 
 const store = createStore(rootReducer, applyMiddleware(ReduxPromise))
-
 store.dispatch(fetchMessages())
 
 ReactDOM.render(
