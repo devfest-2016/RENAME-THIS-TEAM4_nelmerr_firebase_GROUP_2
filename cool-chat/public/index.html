@@ -9,15 +9,24 @@
     <!-- Firebase JS -->
     <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
     <script>
-       var config = {
-         apiKey: "AIzaSyB0QAJAnXUD3YlpqtSRMll5HpsQkWOc1-U",
-         authDomain: "cool-chat-app-ecf70.firebaseapp.com",
-         databaseURL: "https://cool-chat-app-ecf70.firebaseio.com/",
-         storageBucket: ""
-         };
-       firebase.initializeApp(config);
-    </script> 
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCWrpiO6iHUyvaB2rTM_6AHT_m6YncJTZE",
+        authDomain: "voxpopuli-ff652.firebaseapp.com",
+        databaseURL: "https://voxpopuli-ff652.firebaseio.com",
+        storageBucket: "voxpopuli-ff652.appspot.com",
+        messagingSenderId: "521160580286"
+      };
+      firebase.initializeApp(config);
+      var database = firebase.database();
+      function testFire() {
+      firebase.database().ref('test').on('value', function(data) {
+        console.log('it works',data.val());
+      });
 
+    }
+    testFire()
+  </script>
 
     <!--
       Notice the use of %PUBLIC_URL% in the tag above.
